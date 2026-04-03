@@ -1,16 +1,10 @@
+import Hero from "@/components/Hero";
+
 export default function Contact() {
     return (
         <main>
             {/* Hero Section */}
-            <section className="relative h-96 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
-                <div className="absolute inset-0 bg-black/40"></div>
-                <div className="relative z-10 text-center text-white max-w-4xl px-4">
-                    <p className="text-sm font-semibold tracking-widest mb-4">CONTACT US</p>
-                    <h1 className="text-5xl md:text-6xl font-bold leading-tight">
-                        From specific projects to enquiries, reach out anytime. Let's start the conversation.
-                    </h1>
-                </div>
-            </section>
+            <Hero title="CONTACT US" img="un-properties-contact-hero" text='From specific projects to enquiries, reach out anytime. Let’s start the conversation.' />
 
             {/* Contact Content */}
             <section className="py-20 bg-white">
@@ -20,74 +14,86 @@ export default function Contact() {
                         <div>
                             {/* Office Address */}
                             <div className="mb-12">
-                                <h3 className="text-sm font-bold text-blue-600 tracking-widest mb-4">
+                                <h3 className="text-sm font-bold text-[#370FAF] tracking-widest mb-4">
                                     OFFICE ADDRESS
                                 </h3>
-                                <p className="text-gray-800 leading-relaxed">
+                                <p className="text-[#333333] text-sm leading-relaxed">
                                     D2R, FFAR Mall Area 11, Garki, Abuja
                                 </p>
                             </div>
 
                             {/* Contact Details */}
                             <div className="mb-12">
-                                <h3 className="text-sm font-bold text-blue-600 tracking-widest mb-4">
+                                <h3 className="text-sm font-bold text-[#370FAF] tracking-widest mb-4">
                                     CONTACT DETAILS
                                 </h3>
-                                <p className="text-gray-800 mb-2">+234 907 777 2111</p>
-                                <p className="text-gray-800">info@unpropertiesltd.com</p>
+                                <p className="text-[#333333] text-sm mb-2">+234 907 777 2111</p>
+                                <p className="text-[#333333] text-sm">info@unpropertiesltd.com</p>
                             </div>
 
                             {/* Office Hours */}
                             <div>
-                                <p className="text-gray-600 text-sm">
+                                <p className="text-[#333333] text-sm">
                                     Note: Our doors are open Mon – Sat, 9 AM – 5 PM
                                 </p>
                             </div>
                         </div>
 
                         {/* Right Side - Contact Form */}
-                        <div className="bg-gray-50 p-8 rounded-lg">
+                        <div className="bg-[#F5F5F5] border border-[#D1D1D1] lg:p-8 p-4 rounded-lg">
                             <form className="space-y-6">
                                 <div>
+                                    <label htmlFor="full-name" className="block text-[#333333] text-sm font-medium mb-2">
+                                        Full Name
+                                    </label>
                                     <input
                                         type="text"
-                                        placeholder="Full Name"
-                                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-blue-600 text-gray-800 placeholder-gray-500"
+                                        id="full-name"
+                                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#370FAF] text-gray-800 placeholder-gray-500"
                                     />
                                 </div>
 
                                 <div>
+                                    <label htmlFor="phone" className="block text-[#333333] text-sm font-medium mb-2">
+                                        Phone
+                                    </label>
+
                                     <input
                                         type="tel"
-                                        placeholder="Phone"
-                                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-blue-600 text-gray-800 placeholder-gray-500"
+                                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#370FAF] text-gray-800 placeholder-gray-500"
                                     />
                                 </div>
 
                                 <div>
+                                    <label htmlFor="email" className="block text-[#333333] text-sm font-medium mb-2">
+                                        Email
+                                    </label>
                                     <input
-                                        type="text"
-                                        placeholder="Your Interest"
-                                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-blue-600 text-gray-800 placeholder-gray-500"
+                                        type="email"
+                                        id="email"
+                                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#370FAF] text-gray-800 placeholder-gray-500"
                                     />
                                 </div>
 
                                 <div>
+                                    <label htmlFor="message" className="block text-[#333333] text-sm font-medium mb-2">
+                                        Message
+                                    </label>
                                     <textarea
-                                        placeholder="Message"
                                         rows={5}
-                                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-blue-600 text-gray-800 placeholder-gray-500 resize-none"
+                                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#370FAF] text-gray-800 placeholder-gray-500 resize-none"
+                                        id="message"
                                     ></textarea>
                                 </div>
 
                                 <button
                                     type="submit"
-                                    className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 transition tracking-wider"
+                                    className="w-full border border-[#370FAF] rounded-sm text-[#370FAF] text-sm py-3 px-6 transition tracking-wider"
                                 >
                                     REQUEST A CALLBACK
                                 </button>
 
-                                <p className="text-center text-gray-600 text-sm">
+                                <p className="text-center text-[#333333] text-sm">
                                     Expect a response within 2 hours during work hours.
                                 </p>
                             </form>
@@ -97,16 +103,18 @@ export default function Contact() {
             </section>
 
             {/* Map Section */}
-            <section className="py-20 bg-gray-100">
-                <div className="max-w-6xl mx-auto px-4">
-                    <div className="h-96 bg-gradient-to-br from-gray-300 to-gray-400 rounded-lg flex items-center justify-center">
-                        <div className="text-center text-gray-600">
-                            <p className="text-lg font-semibold">GOOGLE MAP OF THEIR ADDRESS</p>
-                            <p className="text-sm mt-2">
-                                (Embed your Google Map here using react-google-maps or similar)
-                            </p>
-                        </div>
-                    </div>
+            <section className="">
+                <div className="w-full h-[600px] overflow-hidden shadow">
+                    <iframe
+                        title="UN Properties Location"
+                        src="https://maps.google.com/maps?width=100%25&amp;height=400&amp;hl=en&amp;q=D28, EFAB Mall Area 11, Garki, Abuja&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0 }}
+                        allowFullScreen={false}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
                 </div>
             </section>
         </main>

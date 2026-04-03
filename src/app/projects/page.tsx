@@ -5,7 +5,7 @@ import { projects } from "@/utils/projects";
 
 const ProjectsPage = () => {
     return (
-        <main className='max-w-7xl mx-auto p-4'>
+        <main className='max-w-7xl mx-auto'>
             <div className='lg:max-w-4xl mx-auto my-32 text-center'>
                 <p className='lg:text-[90px] text-6xl text-[#370FAF] font-bold'>Our Curated Projects</p>
                 <p className='lg:w-1/2 mx-auto text-[#333333]'>Discover a collection of our turnkey projects, each crafted for

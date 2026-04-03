@@ -8,7 +8,7 @@ export default function Header() {
 
     return (
         <header className="text-[#370FAF] fixed w-full z-50 bg-white shadow-sm">
-            <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+            <div className="max-w-7xl mx-auto lg:px-0 px-4 py-4 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 flex-shrink-0">
                     <img src="/images/un-properties-logo.svg" alt="UN Properties" />

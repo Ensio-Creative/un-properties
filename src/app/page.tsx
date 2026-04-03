@@ -51,7 +51,7 @@ export default function Home() {
 
       {/* Featured Projects */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto">
           <h2 className="lg:text-5xl text-3xl font-bold text-[#370FAF] mb-12">Featured Projects</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -68,7 +68,7 @@ export default function Home() {
 
       {/* Our Services */}
       <section className="">
-        <div className="lg:ml-20 mx-auto px-4">
+        <div className="lg:ml-20 mx-auto">
           <h2 className="lg:text-5xl text-3xl font-bold text-[#370FAF] mb-12">Our Services</h2>
 
           <div className="relative">
@@ -99,7 +99,7 @@ export default function Home() {
 
       {/* Beyond the Brick and Mortar */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center">
             {/* Left Content */}
             <div className="bg-[#F5F5F5] h-full px-10 py-20">
