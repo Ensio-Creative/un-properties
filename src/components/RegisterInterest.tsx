@@ -25,7 +25,7 @@ const RegisterInterest = () => {
                         <div className='my-2'>
                             <input type="text" placeholder='Interest' className='border-b py-3 border-[#D1D1D1] w-full' />
                         </div>
-                        <button className="border-1 border-[#370FAF] text-[#370FAF] text-sm px-8 py-3 font-medium mt-10">
+                        <button className="border-1 border-[#370FAF] text-[#370FAF] text-sm px-8 py-3 font-medium mt-4">
                             SUBMIT
                         </button>
                     </div>

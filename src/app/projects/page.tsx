@@ -14,7 +14,7 @@ const ProjectsPage = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                    {projects.map((item) => <ProjectCard img={item.img} title={item.title} text={item.text} />)}
+                    {projects.map((item) => <ProjectCard img={item.img} title={item.title} text={item.text} type={item.type} />)}
                 </div>
             </section>
 
