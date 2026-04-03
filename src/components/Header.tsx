@@ -16,19 +16,19 @@ export default function Header() {
 
                 {/* Navigation */}
                 <nav className="hidden md:flex items-center gap-8">
-                    <Link href="/" className="hover:text-blue-400 transition">
+                    <Link href="/" >
                         Home
                     </Link>
-                    <Link href="/projects" className="hover:text-blue-400 transition">
+                    <Link href="/projects">
                         Projects
                     </Link>
-                    <Link href="/services" className="hover:text-blue-400 transition">
+                    <Link href="/services">
                         Services
                     </Link>
-                    <Link href="/about" className="hover:text-blue-400 transition">
+                    <Link href="/about">
                         About
                     </Link>
-                    <Link href="/contact" className="hover:text-blue-400 transition">
+                    <Link href="/contact">
                         Contact
                     </Link>
                 </nav>
