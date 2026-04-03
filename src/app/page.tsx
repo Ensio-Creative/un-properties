@@ -32,8 +32,17 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="bg-[#0E062B] h-[95vh] text-white py-24 mt-20 flex items-end">
-        <div className="max-w-7xl mx-auto px-4 w-full">
+      <section className="relative h-[95vh] text-white py-24 mt-20 flex items-end overflow-hidden">
+        <video
+          className="absolute inset-0 w-full h-full object-cover z-0"
+          src="/images/un-properties-video_062208.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
+        <div className="absolute inset-0 bg-[#0E062B]/70 z-10" />
+        <div className="max-w-7xl mx-auto px-4 w-full relative z-20">
           <div className="max-w-3xl">
             <h1 className="text-6xl md:text-[80px] font-bold mb-8 lg:leading-20">
               Ambitious Team. Exceptional Results.

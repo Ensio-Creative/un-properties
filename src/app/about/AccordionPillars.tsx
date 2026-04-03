@@ -11,17 +11,17 @@ const pillars = [
     {
         title: "Rectitude",
         content:
-            "Integrity is non-negotiable. Every property undergoes rigorous legal verification before offering to clients.",
+            "We conduct exhaustive due diligence on every asset. From title verification to land history, we ensure your ownership is undisputed and secure.",
     },
     {
         title: "Transparency",
         content:
-            "Clear communication and honest dealings define our relationships with clients and stakeholders.",
+            "We believe in data-driven growth. Our clients receive clear, honest insights into market trends, project timelines, and exit strategies.",
     },
     {
         title: "Innovation",
         content:
-            "We embrace modern construction techniques and sustainable building practices.",
+            "From sustainable building practices to modern property management tech, we stay ahead of the curve to ensure your asset remains competitive.",
     },
 ];
 
