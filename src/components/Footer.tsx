@@ -73,7 +73,7 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom */}
-                <div className="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <div className="pt-8 flex flex-col md:flex-row justify-between items-center">
                     <p className="text-sm">
                         © {new Date().getFullYear()} UN Properties. All Rights Reserved.
                     </p>

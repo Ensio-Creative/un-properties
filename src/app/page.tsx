@@ -7,6 +7,7 @@ import { projects } from "@/utils/projects";
 import { SwiperSlide, Swiper } from "swiper/react";
 import 'swiper/css';
 import SwiperNavButtons from "@/components/SwiperNavButtons";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -31,17 +32,17 @@ export default function Home() {
   return (
     <main>
       {/* Hero Section */}
-      <section className="bg-[#0E062B] h-[95vh] text-white py-24 flex items-end">
+      <section className="bg-[#0E062B] h-[95vh] text-white py-24 mt-20 flex items-end">
         <div className="max-w-7xl mx-auto px-4 w-full">
           <div className="max-w-3xl">
-            <h1 className="text-5xl md:text-[80px] font-bold mb-8 leading-20">
+            <h1 className="text-6xl md:text-[80px] font-bold mb-8 lg:leading-20">
               Ambitious Team. Exceptional Results.
             </h1>
             <div className="flex gap-4 flex-wrap">
-              <button className="bg-[#370FAF] text-white px-8 py-3 font-medium transition">
+              <button className="bg-[#370FAF] lg:w-auto w-full text-white px-8 py-3 font-medium transition">
                 EXPLORE PROJECTS
               </button>
-              <button className="border border-white hover:bg-white hover:text-slate-900 text-white px-8 py-3 font-medium transition">
+              <button className="border lg:w-auto w-full border-white hover:bg-white hover:text-slate-900 text-white px-8 py-3 font-medium transition">
                 OUR SERVICES
               </button>
             </div>
@@ -50,8 +51,9 @@ export default function Home() {
       </section>
 
       {/* Featured Projects */}
+
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto lg:px-0 px-4">
           <h2 className="lg:text-5xl text-3xl font-bold text-[#370FAF] mb-12">Featured Projects</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
@@ -59,16 +61,18 @@ export default function Home() {
           </div>
 
           <div className="flex justify-center mt-20 mx-auto text-center">
-            <button className="border-1 text-sm border-[#370FAF] lg:w-[32%] w-full text-[#370FAF] py-3">
-              EXPLORE ALL PROJECTS
-            </button>
+            <Link href={'/projects'} className="lg:w-auto w-full">
+              <button className="border-1 text-sm border-[#370FAF] lg:w-[32%] w-full text-[#370FAF] py-3">
+                EXPLORE ALL PROJECTS
+              </button>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Our Services */}
       <section className="">
-        <div className="lg:ml-20 mx-auto">
+        <div className="lg:ml-20 mx-auto lg:px-0 px-4">
           <h2 className="lg:text-5xl text-3xl font-bold text-[#370FAF] mb-12">Our Services</h2>
 
           <div className="relative">
@@ -99,17 +103,19 @@ export default function Home() {
 
       {/* Beyond the Brick and Mortar */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto lg:px-0 px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center">
             {/* Left Content */}
-            <div className="bg-[#F5F5F5] h-full px-10 py-20">
+            <div className="bg-[#F5F5F5] h-full lg:px-10 px-5 lg:py-20 py-10">
               <h2 className="lg:text-5xl text-3xl font-bold text-[#370FAF] mb-12">Beyond the Brick<br />and Mortar</h2>
               <p className="text-gray-600 my-20 leading-relaxed">
                 With a proven track record across residential, commercial, and investment properties like expertise, precision, and dedication we bring smart every project is handled with the highest standards.
               </p>
-              <button className="border-1 border-[#370FAF] text-[#370FAF] text-sm px-8 py-3 font-medium">
-                LEARN ABOUT US
-              </button>
+              <Link href={'/about'}>
+                <button className="border-1 border-[#370FAF] text-[#370FAF] text-sm px-8 py-3 font-medium">
+                  LEARN ABOUT US
+                </button>
+              </Link>
             </div>
 
             {/* Right Image */}

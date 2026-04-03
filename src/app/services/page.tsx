@@ -1,11 +1,10 @@
+import Hero from "@/components/Hero";
+
 export default function Services() {
     return (
         <main>
             {/* Hero Section */}
-            <section className="relative h-80 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-black/30"></div>
-                <h1 className="relative z-10 text-6xl md:text-7xl font-bold text-white">Our Services</h1>
-            </section>
+            <Hero img="un-properties-services-hero" />
 
             {/* Introduction */}
             <section className="py-20 bg-white">
