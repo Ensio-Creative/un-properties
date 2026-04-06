@@ -1,6 +1,58 @@
+'use client';
+
+import { useState } from 'react';
+import axios from 'axios';
 import Hero from "@/components/Hero";
 
 export default function Contact() {
+    const [formData, setFormData] = useState({
+        fullName: '',
+        phone: '',
+        email: '',
+        message: ''
+    });
+    const [isLoading, setIsLoading] = useState(false);
+    const [successMessage, setSuccessMessage] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [name]: value
+        }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setIsLoading(true);
+        setSuccessMessage('');
+        setErrorMessage('');
+
+        try {
+            await axios.post('https://formsubmit.co/info@unproperties.com', {
+                fullName: formData.fullName,
+                phone: formData.phone,
+                email: formData.email,
+                message: formData.message,
+                _captcha: 'false'
+            });
+
+            setSuccessMessage('Thank you! Your message has been sent successfully.');
+            setFormData({
+                fullName: '',
+                phone: '',
+                email: '',
+                message: ''
+            });
+        } catch (error) {
+            setErrorMessage('Failed to send message. Please try again later.');
+            console.error('Form submission error:', error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     return (
         <main>
             {/* Hero Section */}
@@ -41,14 +93,18 @@ export default function Contact() {
 
                         {/* Right Side - Contact Form */}
                         <div className="bg-[#F5F5F5] border border-[#D1D1D1] lg:p-8 p-4 rounded-lg">
-                            <form className="space-y-6 lg:py-0 py-4">
+                            <form onSubmit={handleSubmit} className="space-y-6 lg:py-0 py-4">
                                 <div>
-                                    <label htmlFor="full-name" className="block text-[#333333] text-sm font-medium mb-2">
+                                    <label htmlFor="fullName" className="block text-[#333333] text-sm font-medium mb-2">
                                         Full Name
                                     </label>
                                     <input
                                         type="text"
-                                        id="full-name"
+                                        id="fullName"
+                                        name="fullName"
+                                        value={formData.fullName}
+                                        onChange={handleChange}
+                                        required
                                         className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#370FAF] text-gray-800 placeholder-gray-500"
                                     />
                                 </div>
@@ -60,6 +116,11 @@ export default function Contact() {
 
                                     <input
                                         type="tel"
+                                        id="phone"
+                                        name="phone"
+                                        value={formData.phone}
+                                        onChange={handleChange}
+                                        required
                                         className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#370FAF] text-gray-800 placeholder-gray-500"
                                     />
                                 </div>
@@ -71,6 +132,10 @@ export default function Contact() {
                                     <input
                                         type="email"
                                         id="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        required
                                         className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#370FAF] text-gray-800 placeholder-gray-500"
                                     />
                                 </div>
@@ -81,16 +146,33 @@ export default function Contact() {
                                     </label>
                                     <textarea
                                         rows={5}
-                                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#370FAF] text-gray-800 placeholder-gray-500 resize-none"
                                         id="message"
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleChange}
+                                        required
+                                        className="w-full px-4 py-3 bg-white border border-gray-300 rounded focus:outline-none focus:border-[#370FAF] text-gray-800 placeholder-gray-500 resize-none"
                                     ></textarea>
                                 </div>
 
+                                {successMessage && (
+                                    <p className="text-green-600 text-sm text-center">
+                                        {successMessage}
+                                    </p>
+                                )}
+
+                                {errorMessage && (
+                                    <p className="text-red-600 text-sm text-center">
+                                        {errorMessage}
+                                    </p>
+                                )}
+
                                 <button
                                     type="submit"
-                                    className="w-full rounded-sm border border-[#370FAF] rounded-sm text-[#370FAF] text-sm py-3 px-6 transition tracking-wider"
+                                    disabled={isLoading}
+                                    className="w-full rounded-sm border border-[#370FAF] text-[#370FAF] text-sm py-3 px-6 transition tracking-wider disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    REQUEST A CALLBACK
+                                    {isLoading ? 'SENDING...' : 'REQUEST A CALLBACK'}
                                 </button>
 
                                 <p className="text-center text-[#333333] text-sm">

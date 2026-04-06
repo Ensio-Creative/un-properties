@@ -115,9 +115,9 @@ export default function Home() {
         <div className="max-w-7xl mx-auto lg:px-0 px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 items-center">
             {/* Left Content */}
-            <div className="bg-[#F5F5F5] h-full lg:px-10 px-5 lg:py-20 py-10">
+            <div className="bg-[#F5F5F5] h-full lg:px-20 px-5 lg:py-20 py-10">
               <h2 className="lg:text-5xl text-3xl font-bold text-[#370FAF] mb-12">Beyond the Brick<br />and Mortar</h2>
-              <p className="text-gray-600 lg:my-20 my-10 leading-relaxed">
+              <p className="text-gray-600 lg:my-10 my-10 leading-relaxed">
                 With a proven track record across residential, commercial, and investment properties like expertise, precision, and dedication we bring smart every project is handled with the highest standards.
               </p>
               <Link href={'/about'}>
