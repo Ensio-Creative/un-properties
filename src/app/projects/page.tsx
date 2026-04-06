@@ -1,3 +1,8 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Projects - UN Properties",
+};
 import ProjectCard from '@/components/ProjectCard';
 import RegisterInterest from '@/components/RegisterInterest';
 import React from 'react';
