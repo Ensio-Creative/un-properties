@@ -65,8 +65,8 @@ export default function Footer() {
                     {/* Contact */}
                     <div className="lg:col-span-1 col-span-3">
                         <h3 className="font-bold text-lg mb-4">CONTACT</h3>
-                        <a href="tel:+12345678901" className="text-sm mb-2 inline-block">
-                            +1 234 567 8901
+                        <a href="tel:+2349077772111" className="text-sm mb-2 inline-block">
+                            +234 907 777 2111
                         </a>
                         {/* <p className="text-sm">info@unproperties.com</p> */}
                     </div>

@@ -42,19 +42,19 @@ export default function Home() {
           playsInline
         />
         <div className="absolute inset-0 bg-black/40 z-10" />
-        <div className="max-w-7xl mx-auto px-4 w-full relative z-20">
+        <div className="max-w-7xl mx-auto px-4 w-full relative z-20 top-10">
           <div className="max-w-3xl">
-            <h1 className="text-6xl md:text-[80px] font-bold mb-8 lg:leading-20">
+            <h1 className="text-6xl md:text-[80px] font-bold lg:mb-8 lg:leading-20">
               Ambitious Team. Exceptional Results.
             </h1>
-            <div className="flex gap-4 flex-wrap">
+            {/* <div className="flex gap-4 flex-wrap">
               <button className="bg-[#370FAF] lg:w-auto w-full text-white px-8 py-3 font-medium transition">
                 EXPLORE PROJECTS
               </button>
               <button className="border lg:w-auto w-full border-white hover:bg-white hover:text-slate-900 text-white px-8 py-3 font-medium transition">
                 OUR SERVICES
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
