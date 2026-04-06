@@ -12,10 +12,10 @@ const ProjectCard = ({ img, title, text, type }: { img: string, title: string, t
             </div>
             {open && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60" onClick={() => setOpen(false)}>
-                    <div className="bg-white shadow-lg overflow-auto max-w-6xl max-h-[85vh] w-full lg:p-12 p-6 relative" onClick={e => e.stopPropagation()}>
-                        <button className="absolute top-3 right-3 text-2xl text-gray-400 hover:text-[#370FAF]" onClick={() => setOpen(false)}>&times;</button>
-                        <img src={`/images/projects/${img}.jpg`} alt="" className="w-full mb-4" />
-                        <div className='lg:flex'>
+                    <div className="bg-white m-4 shadow-lg overflow-auto max-w-6xl max-h-[85vh] w-full lg:p-12 p-6 relative" onClick={e => e.stopPropagation()}>
+                        <button className="absolute lg:top-2 top-2 lg:right-2 right-2 text-2xl text-[#370FAF]" onClick={() => setOpen(false)}>&times;</button>
+                        <img src={`/images/projects/${img}.jpg`} alt="" className="w-full mb-8" />
+                        <div className='lg:flex lg:mb-0 mb-4'>
                             <div className='lg:w-1/2'>
                                 <h2 className="text-2xl font-bold text-[#370FAF] mb-2">{title}</h2>
                             </div>

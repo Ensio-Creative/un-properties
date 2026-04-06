@@ -10,7 +10,7 @@ const RegisterInterest = () => {
 
                     {/* Right  */}
                     <div className="bg-[#F5F5F5] text-sm h-full lg:p-10 p-5">
-                        <h2 className="lg:text-5xl text-3xl font-bold text-[#370FAF] mb-12">Register your Interest</h2>
+                        <h2 className="lg:text-5xl text-3xl font-bold text-[#370FAF] mt-4 mb-10">Register your Interest</h2>
                         <div className='my-2'>
                             <input type="text" placeholder='Full Name' className='border-b py-3 border-[#D1D1D1] w-full' />
                         </div>
@@ -25,7 +25,7 @@ const RegisterInterest = () => {
                         <div className='my-2'>
                             <input type="text" placeholder='Interest' className='border-b py-3 border-[#D1D1D1] w-full' />
                         </div>
-                        <button className="border-1 border-[#370FAF] text-[#370FAF] text-sm px-8 py-3 font-medium mt-4">
+                        <button className="border-1 rounded-sm border-[#370FAF] text-[#370FAF] text-sm px-8 py-3 font-medium mt-4 lg:mb-0 mb-6">
                             SUBMIT
                         </button>
                     </div>

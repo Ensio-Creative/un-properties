@@ -11,7 +11,7 @@ export default function Header() {
             <div className="max-w-7xl mx-auto lg:px-0 px-4 py-4 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="flex items-center gap-2 flex-shrink-0">
-                    <img src="/images/un-properties-logo.svg" alt="UN Properties" />
+                    <img src="/images/un-properties-logo.svg" className="lg:w-auto w-50" alt="UN Properties" />
                 </Link>
 
                 {/* Navigation */}
@@ -68,7 +68,7 @@ export default function Header() {
             {/* Mobile Menu */}
             {mobileMenuOpen && (
                 <nav className="md:hidden fixed inset-0 top-[73px] bg-white z-40">
-                    <div className="max-w-7xl mx-auto px-4 py-8 flex flex-col">
+                    <div className="max-w-7xl mt-20 mx-auto px-4 py-8 flex flex-col">
                         <Link
                             href="/"
                             className="text-[#370FAF] text-[40px] uppercase font-medium"

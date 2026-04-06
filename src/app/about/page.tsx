@@ -32,9 +32,9 @@ export default function About() {
                     style={{ backgroundImage: 'url("/images/un-properties-mission.jpg")' }}></div>
 
                 <div className="relative z-20 max-w-7xl mx-auto w-full pb-32">
-                    <div className="lg:flex lg:px-0 px-4 justify-between border-t pt-6 border-white">
+                    <div className="lg:flex lg:mx-0 mx-4 justify-between border-t pt-6 border-white">
                         <h2 className="lg:text-3xl font-bold mb-6">Our Mission</h2>
-                        <p className="text-white text-sm lg:w-[30%] leading-relaxed">
+                        <p className="text-white lg:text-sm lg:w-[30%] leading-relaxed">
                             To empower individuals and corporate investors by providing secure, high-value real estate assets through expert consultancy, transparent marketing, and superior construction.
                         </p>
                     </div>

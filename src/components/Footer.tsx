@@ -4,11 +4,11 @@ export default function Footer() {
     return (
         <footer className="bg-[#0E062B] text-white">
             <div className="max-w-7xl mx-auto px-4 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-6 gap-8 mb-8">
+                <div className="grid grid-cols-2 md:grid-cols-6 gap-8 mb-8">
                     {/* Brand */}
                     <div className="col-span-3">
                         <Link href="/" className="flex items-center gap-2 mb-4">
-                            <img src="/images/un-properties-footer-logo.svg" alt="" />
+                            <img className="lg:w-auto w-64" src="/images/un-properties-footer-logo.svg" alt="" />
                         </Link>
 
                     </div>
@@ -63,7 +63,7 @@ export default function Footer() {
                     </div>
 
                     {/* Contact */}
-                    <div>
+                    <div className="lg:col-span-1 col-span-3">
                         <h3 className="font-bold text-lg mb-4">CONTACT</h3>
                         <a href="tel:+12345678901" className="text-sm mb-2 inline-block">
                             +1 234 567 8901

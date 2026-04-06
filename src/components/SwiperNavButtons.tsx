@@ -3,7 +3,7 @@ import { useSwiper } from 'swiper/react';
 export default function SwiperNavButtons() {
     const swiper = useSwiper();
     return (
-        <div className="flex justify-between gap-4 w-32 ml-auto mt-6">
+        <div className="flex justify-between gap-4 w-24 ml-auto mt-6">
             <button
                 aria-label="Previous"
                 className="w-10 h-10 flex items-center justify-center rounded-full border border-[#370FAF] text-[#370FAF] hover:bg-[#370FAF] hover:text-white transition"

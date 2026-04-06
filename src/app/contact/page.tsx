@@ -41,7 +41,7 @@ export default function Contact() {
 
                         {/* Right Side - Contact Form */}
                         <div className="bg-[#F5F5F5] border border-[#D1D1D1] lg:p-8 p-4 rounded-lg">
-                            <form className="space-y-6">
+                            <form className="space-y-6 lg:py-0 py-4">
                                 <div>
                                     <label htmlFor="full-name" className="block text-[#333333] text-sm font-medium mb-2">
                                         Full Name
@@ -88,7 +88,7 @@ export default function Contact() {
 
                                 <button
                                     type="submit"
-                                    className="w-full border border-[#370FAF] rounded-sm text-[#370FAF] text-sm py-3 px-6 transition tracking-wider"
+                                    className="w-full rounded-sm border border-[#370FAF] rounded-sm text-[#370FAF] text-sm py-3 px-6 transition tracking-wider"
                                 >
                                     REQUEST A CALLBACK
                                 </button>
